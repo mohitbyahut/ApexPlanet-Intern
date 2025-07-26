@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Weather & Quiz Dashboard</title>
+</head>
+<body>
+  <header>
+    <h1>🌤️ Weather & Quiz Dashboard</h1>
+  </header>
+
+  <main class="container">
+    <!-- Quiz Section -->
+    <section class="quiz">
+      <h2>Quick Quiz</h2>
+      <div id="question">Loading question...</div>
+      <div id="options"></div>
+      <div class="quiz-buttons">
+        <button id="next" class="quiz-btn">Next</button>
+        <button id="restart" class="quiz-btn">Restart</button>
+      </div>
+      <div id="score"></div>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+      <h2>Check Weather</h2>
+      <input type="text" id="cityInput" placeholder="Enter city name" />
+      <button id="getWeather">Get Weather</button>
+      <div id="weatherResult"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 ApexPlanet | Built with ❤️ using HTML, CSS & JS</p>
+    <button id="restartQuiz" class="restart-btn">Restart Quiz</button>
+  </footer>
+
+ <script src="script.js"></script>
+</body>
+</html>

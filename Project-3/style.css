@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+header, footer {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  user-select: none;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2em;
+  gap: 2em;
+}
+
+section {
+  background: white;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+  margin-bottom: 1em;
+  color: #0077b6;
+}
+
+input, button {
+  width: 100%;
+  padding: 0.75em;
+  margin-top: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, button:focus {
+  outline: none;
+  border-color: #0077b6;
+  box-shadow: 0 0 5px #0077b6;
+}
+
+button {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+button:hover:not(:disabled) {
+  background-color: #005f87;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+#options button {
+  margin-top: 0.5em;
+  background-color: #e0f2f1;
+  color: #333;
+  border: 1px solid #bbb;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#options button.correct {
+  background-color: #81c784;
+  animation: correctPulse 0.6s ease forwards;
+}
+
+#options button.incorrect {
+  background-color: #e57373;
+  animation: incorrectShake 0.6s ease forwards;
+}
+
+#score {
+  margin-top: 1em;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #0077b6;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #0077b6;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  display: none; 
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes correctPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes incorrectShake {
+  0%, 100% { transform: translateX(0); }
+  25%, 75% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1em;
+    gap: 1em;
+  }
+  
+  section {
+    padding: 1.5em;
+    margin: 0.5em 0;
+  }
+  
+  button {
+    min-height: 44px;
+  }
+  
+  #options button {
+    width: 100%;
+    margin: 0.3em 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header, footer {
+    padding: 0.8em;
+  }
+  
+  section {
+    padding: 1em;
+  }
+  
+  input, button {
+    padding: 0.8em;
+    font-size: 0.9em;
+  }
+  
+  #weatherResult {
+    font-size: 0.9em;
+  }
+}
+<footer>
+  &copy; 2024 Your Company. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+</footer>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1; 
+}
+
+footer {
+  background-color: #005f87;
+  color: #e0f7fa;
+  text-align: center;
+  padding: 1.5em 1em;
+  font-size: 0.9em;
+  user-select: none;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
