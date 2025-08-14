@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Snack Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <div id="navbar">
+      <input type="checkbox" id="check" name="" value="" />
+      <label for="check" id="checkbtn"><i class="fas fa-bars"></i> </label>
+      <div class="logo-box">LOGO</div>
+      <ul>
+        <li class="item"><a href="Home.html">Home</a></li>
+        <li class="item"><a href="index.html">Section</a></li>
+        <li class="item"><a href="#">Contact</a></li>
+        <li class="item"><a href="#">Feedback</a></li>
+        <li class="item"><a href="#">About</a></li>
+      </ul>
+    </div>
+
+    <!-- Login Form Container -->
+    <div class="auth-container">
+      <div class="form-container" id="login-container">
+        <h2>Login to Your Account</h2>
+        <form id="login-form">
+          <div class="input-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" required />
+          </div>
+          <div class="input-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required />
+          </div>
+          <div class="error-message" id="login-error"></div>
+          <button type="submit">Login</button>
+        </form>
+        <div class="form-footer">
+          <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="auth.js"></script>
+  </body>
+</html>

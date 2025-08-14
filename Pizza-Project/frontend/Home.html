@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturent web</title>
+    <!-- css for locomotive -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <!-- css for using sheryjs -->
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+    <!-- main-container -->
+    <header id="main-container">
+
+    <!-- Navbar Section -->
+    <div id="navbar">
+        <input type="checkbox" id="check" name="" value="" />
+        <label for="check" id="checkbtn"><i class="fas fa-bars"></i> </label>
+        <div class="logo-box">LOGO</div>
+        <ul>
+          <li class="item"><a href="Home.html">Home</a></li>
+          <li class="item"><a href="login.html" id="section-link">Section</a></li>
+          <li class="item"><a href="contact.html">Contact</a></li>
+          <li class="item"><a href="feedback.html">Feedback</a></li>
+          <li class="item"><a href="about.html">About</a></li>
+        </ul>
+        <div class="add-to-box">
+          <div class="dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn">👤</button>
+            <div id="myDropdown" class="dropdown-content">
+              <li class="item auth-item">
+                <a href="login.html" id="login-link">Login</a>
+              </li>
+              <li class="item auth-item">
+                <a href="signup.html" id="signup-link">Sign Up</a>
+              </li>
+              <li class="item auth-item" style="display: none">
+                <a href="#" id="logout-link" onclick="logout()">Logout</a>
+              </li>
+              <li class="item auth-item" style="display: none">
+                <span id="user-info"></span>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- main-container  container -->
+        <div id="container">
+            <img class="slide" src="pizza3.jpg" alt="">
+            <img class="slide" src="Untitled design2.jpg" alt="">
+            <img class="slide" src="Untitled design1.jpg" alt="">
+            <img class="slide" src="pizza4.jpg" alt="">
+        </div>
+        <button class="btn1" onclick="pre()">pre</button>
+        <button class="btn2" onclick="next()">next</button>
+        <!-- container1 -->
+        <div id="container1">
+            <h1>We Offer Top Notch</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <span class="small-box1">
+                </span> Voluptatem in dolor eaque ab distinctio unde <span class="small-box2"></span> corporis doloribus
+                perspiciatis omnis consequuntur impedit, dicta cupiditate commodi ad itaque eius deleniti neque
+                sapiente!</p>
+        </div>
+        <!-- container2 -->
+        <div id="container2">
+            <div class="box1">
+                <img src="https://api.dominos.co.in/prod-olo-api/images/dynamicOffers/Sunday_Special_offers_AC_202410201729399304_202410211729485978_202410221729573259_202411201732090902_202412261735198159_202503181742280842_202503181742280870.jpg?ver=0.0.1" alt="">
+                <div class="box1a">
+                    <h1>Veg Pizza</h1>
+                    <p>The awesome foursome! Golden, black olives, capsicums, red paprika</p>
+                    <a href="login.html"><button class="view-more1">View More</button></a>
+                </div>
+            </div>
+            <div class="box2">
+                <img src="https://api.dominos.co.in/prod-olo-api/images/dynamicOffers/Dominos_Cheese-Burst-AC_202410241729754536.JPG?ver=0.0.1" alt="">
+                <div class="box2a">
+                    <h1>Cheese Brust Pizza</h1>
+                    <p>Molten Cheese Indulgence with Flavorful trio of juicy paneer, crisp capsicum & spicy red paprika</p>
+                    <a href="login.html"><button class="view-more1">View More</button></a>
+                </div>
+            </div>
+        </div>
+        <!-- container3 -->
+        <div id="container3">
+            <div class="box1">
+                <img src="https://api.dominos.co.in/prod-olo-api/images/dynamicOffers/Domino%2527s_cheese-volcano-revamp_AC_202409301727679855_202411081731063825.jpg?ver=0.0.1" alt="">
+                <div class="box1a">
+                    <h1>Cheese Volcano </h1>
+                    <p>Centre loaded with Molten Cheese & topped with peppy Paneer, Capsicum & Red Paprika
+                    </p>
+                    <a href="login.html"><button class="view-more1">View More</button></a>
+                </div>
+            </div>
+            <div class="box2">
+                <img src="https://api.dominos.co.in/prod-olo-api/images/dynamicOffers/Chocolava_KV_App_Carousel_400x220px_202409301727679882_202410011727758996_202410011727766705_202410091728451033_202410151728996299_202410161729071005_202410241729754696_202411071730957121_202503181742281735_202503191742361186.jpg?ver=0.0.1" alt="">
+                <div class="box2a">
+                    <h1>Desserts </h1>
+                    <p>Chocolate lovers delight! Indulgent, gooey molten lava inside chocolate cake. </p>
+                    <a href="login.html"><button class="view-more1">View More</button></a>
+                </div>
+            </div>
+        </div>
+        <!-- container4 -->
+        <div id="container4">
+            <div class="box1">
+                <h1>Every Fla Vor</h1>
+                <h1>Tells a Story</h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem sequi reprehenderit aspernatur
+                    impedit totam beatae. Aperiam, eius. Pariatur quas vero sed nostrum doloremque consectetur molestias
+                    itaque fugiat? Quibusdam reiciendis aliquid minima cupiditate maiores adipisci nemo natus impedit
+                    minus? Mollitia provident possimus pariatur ullam temporibus sed odit magnam libero illo eaque.
+                </p>
+                <h2>Book Through Call</h2>
+                <h3>+80(400)123 98</h3>
+                <a href="#"><button class="btn3">VIEW MORE</button></a>
+            </div>
+            <div class="box2">
+                <div class="box2a">
+                    <a href="#"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/1e/18/d0/pizza-hut.jpg?w=900&h=500&s=1" alt=""></a>
+                    <!-- <div class="box2a1"></div> -->
+                    <div class="box2a2">
+                        <a href="#"><img src="https://plus.unsplash.com/premium_photo-1679076061782-0bf8fd0180a3?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGl6emElMjByZXN0YXVyYW50fGVufDB8fDB8fHww" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- container5 -->
+        <div id="container5">
+            <h1>De<span class="small-box1"></span>ici<span class="small-box2"></span>us Menu</h1>
+        </div>
+
+        <!-- container6 -->
+        <div id="container6">
+            <div class="back" id="backbtn">
+                <i class="fa-solid fa-arrow-left-long"></i>
+            </div>
+            <div class="main-box">
+    
+                <div class="box1">
+                    <div class="box1a">
+                        <a href="login.html"><img src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/ff2e39b8-87cc-4f3f-a2f5-06198a85f3df_peppy_paneer_side.webp?ver=V0.0.1" alt=""></a>
+                        <div class="item-info">
+                           <h1>Peppy Panner</h1> 
+                           <p>Flavorful trio of juicy panner, crispy capsicum with spicy red papirka </p>
+                        </div>
+                    </div>
+                    <div class="box1b">
+                        <a href="login.html"><img src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/8abd61ff-024b-45fe-a221-6b72d601cb49_indi_paneer_side_full.webp?ver=V0.0.1" alt=""></a>
+                        <div class="item-info">
+                            <h1>Indi Tandoori Paneer</h1> 
+                            <p>It is hot. It is spicy. It is oh-so-Indian.</p>
+                         </div>
+                    </div>
+                    <div class="box1c">
+                        <a href="login.html"><img src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/1e0261dc-e1d9-407e-ac57-a2f4d9999c81_keema_pp_side.webp?ver=V0.0.1" alt=""></a>
+                        <div class="item-info">
+                            <h1>Chicken Keema Pizza</h1> 
+                            <p>Flavourful & meaty chicken keema paratha </p>
+                         </div>
+                    </div>
+                    <div class="box1d">
+                        <a href="login.html"><img src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/875ced16-9c5b-4c88-b6a7-d101d1d76ce8_HomeProductBigBigPizzaNonVeg.jpg?ver=V0.0.1" alt=""></a>
+                        <div class="item-info">
+                            <h1>Big 6in1 Pizza - Non Veg</h1> 
+                            <p>6 Chicken Bangers in 1 Epic Pan Pizza </p>
+                         </div>
+                    </div>
+                    <div class="box1e">
+                        <a href="login.html"><img src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/9370665f-5afe-4065-a38a-08fcf7081116_CLC_side.webp?ver=V0.0.1" alt=""></a>
+                        <div class="item-info">
+                            <h1>Choco Lava Cake</h1> 
+                            <p>Chocolate lovers</p>
+                         </div>
+                    </div>
+                    <div class="box1f"><a href="login.html"><img src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/9bebff29-041f-420e-839f-cd301d46cb64_Butterscotch_mousse.webp?ver=V0.0.1" alt=""></a>
+                        <div class="item-info">
+                            <h1>Butterscotch Mousse Cake</h1> 
+                            <p>Sweet temptation! Butterscotch flavored mousse. </p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="next" id="nextbtn">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+        <!-- container7 -->
+        <div id="container7">
+            <h1>De<span class="small-box1"></span>ici<span class="small-box2"></span>us F<span class="small-box3"></span> <span class="small-box4"></span>d</h1>
+        </div>
+        
+        <!-- container8 -->
+        <div id="container8">
+            <div class="main-box1">
+                <div class="box1">
+                    <div class="box1a">
+                        <h1>
+                            Non-Veg Pizza
+                        </h1>
+                    </div>
+                    <div class="box1b">
+                        <a href="login.html"><img src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/418bd144-db0b-40b7-810f-02592cc30df8_Nonveg.png?ver=V0.0.1" alt=""></a>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div class="box2a">
+                        <h1>Veg Pizza</h1>
+                    </div>
+                    <div class="box2b">
+                        <a href="login.html"><img src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/cbb3ee22-b9a3-41f3-aef8-f32471f7e4e9_VegPizza.png?ver=V0.0.1" alt=""></a>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div class="box3a">
+                        <h1>Cheese Volcano</h1>
+                    </div>
+                    <div class="box3b">
+                        <a href="login.html"><img src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/d3427d4e-326f-495a-9e2b-22e981f707ab_cheesevolcano.jpg?ver=V0.0.1" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-box1">
+                <div class="box1">
+                    <div class="box4a">
+                        <h1>Pizza Mania</h1>
+                    </div>
+                    <div class="box4b">
+                        <a href="login.html"><img src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/dbe90e2e-af5b-4b5b-9ae2-b7e5134e4a4b_PizzaManianew.png?ver=V0.0.1" alt=""></a>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div class="box5a">
+                        <h1>Desserts</h1>
+                    </div>
+                    <div class="box5b">
+                        <a href="login.html"><img src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/fee74b97-927d-4ba2-bff9-62cb3895afee_olddesertssss.png?ver=V0.0.1" alt=""></a>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div class="box6a">
+                        <h1>Spicy Pizza</h1>
+                    </div>
+                    <div class="box6b">
+                        <a href="login.html"><img src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/25dd5ff4-0f87-472c-9bea-0045a3d9f412_SpicyPizza1.png?ver=V0.0.1" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- container9 -->
+        <div id="container9">
+            <div class="main-box1">
+                <div class="box1">
+                 <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga officiis eligendi quas id sapiente dolorem rerum quam minus iusto perferendis ratione, aspernatur nostrum cumque et incidunt ipsa molestias illum deleniti.</h1>
+                 <div class="box1a">
+                    <img src="carry-creature4.jpeg" alt="">
+                 </div>
+                 <div class="box1b">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                 </div>
+                </div>
+                <div class="box1">
+                  <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio quae tenetur blanditiis ipsum natus deserunt corrupti suscipit. Delectus vel iusto provident laboriosam exercitationem corrupti dignissimos quidem minima nemo distinctio? Numquam ducimus ea voluptatem in velit ab itaque vel possimus asperiores.</h1>
+                  <div class="box1a">
+                    <img src="carry-creature1.jpeg" alt="">
+                  </div>
+                  <div class="box1b">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <div class="box1">
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique provident fugiat ea est cum, repellendus quaerat amet odit vel. Ipsum dolor, numquam accusantium necessitatibus incidunt, exercitationem laborum harum eos sequi excepturi assumenda?</h1>
+                <div class="box1a">
+                    <img src="carry-creature2.jpeg" alt="">
+                </div>
+                <div class="box1b">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                </div>
+               
+                <div class="box1">
+                <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa ipsam quasi rem eum consequatur facere inventore, fugiat amet ipsum nesciunt enim aut dignissimos totam excepturi omnis. Dignissimos.</h1>
+                <div class="box1a">
+                    <img src="carry-creature3.jpeg" alt="">
+                </div>
+                <div class="box1b">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- container10 -->
+        <div id="container10">
+            <h1>Our Strength</h1>
+        </div>
+        <!-- ontainer11 -->
+        <div id="container11">
+            <div class="main-box">
+                <div class="box1">
+                    <div class="box1a">
+                        <i class="fa-solid fa-bowl-food"></i>
+                    </div>
+                    <h1>Hygienic Food</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="box1">
+                    <div class="box1a">
+                        <i class="fa-solid fa-hotel"></i>
+                    </div>
+                    <h1>Fresh Environment</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam vero delectus illum eum nulla voluptates.</p>
+                </div>
+            </div>
+            <div class="main-box">
+                <div class="box1">
+                    <div class="box1a">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h1>Skilled Chefs</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum reiciendis placeat asperiores aut?</p>
+                </div>
+                <div class="box1">
+                    <div class="box1a">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                    </div>
+                    <h1>Events & Party</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+       <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Pizza Project</h3>
+            <p>
+              Delivering happiness in every slice since 2024. Join us in our
+              journey of creating the perfect pizza experience.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+  
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="items.html">Menu</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-section">
+            <h3>Contact Info</h3>
+            <ul class="contact-info">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Pizza Street, Food City,
+                FC 12345
+              </li>
+              <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+              <li><i class="fas fa-envelope"></i> contact@pizzaproject.com</li>
+            </ul>
+          </div>
+  
+          <div class="footer-section">
+            <h3>Opening Hours</h3>
+            <ul class="opening-hours">
+              <li>Monday - Friday: 10:00 AM - 10:00 PM</li>
+              <li>Saturday: 11:00 AM - 11:00 PM</li>
+              <li>Sunday: 11:00 AM - 9:00 PM</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="footer-bottom">
+          <p>&copy; 2024 Pizza Project. All rights reserved.</p>
+        </div>
+      </footer>
+    </header>
+
+
+
+
+
+
+
+
+
+
+    <!-- gsap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--  Gsap is needed for Basic Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Scroll Trigger is needed for Scroll Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Three.js is needed for 3d Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <!-- ControlKit is needed for Debug Panel -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+    <!-- locomotive cdn..... -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+
+    <script src="Home.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Snack Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <div id="navbar">
+      <input type="checkbox" id="check" name="" value="" />
+      <label for="check" id="checkbtn"><i class="fas fa-bars"></i> </label>
+      <div class="logo-box">LOGO</div>
+      <ul>
+        <li class="item"><a href="Home.html">Home</a></li>
+        <li class="item"><a href="index.html">Section</a></li>
+        <li class="item"><a href="#">Contact</a></li>
+        <li class="item"><a href="#">Feedback</a></li>
+        <li class="item"><a href="#">About</a></li>
+      </ul>
+    </div>
+
+    <!-- Signup Form Container -->
+    <div class="auth-container">
+      <div class="form-container" id="signup-container">
+        <h2>Create an Account</h2>
+        <form id="signup-form">
+          <div class="input-group">
+            <label for="signup-name">Full Name</label>
+            <input type="text" id="signup-name" required />
+          </div>
+          <div class="input-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" required />
+          </div>
+          <div class="input-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" required />
+          </div>
+          <div class="input-group">
+            <label for="signup-confirm-password">Confirm Password</label>
+            <input type="password" id="signup-confirm-password" required />
+          </div>
+          <div class="error-message" id="signup-error"></div>
+          <button type="submit">Sign Up</button>
+        </form>
+        <div class="form-footer">
+          <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="auth.js"></script>
+  </body>
+</html>

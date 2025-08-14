@@ -1,0 +1,358 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+/* Navbar styles from Home.css */
+#navbar {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  background-color: rgba(220, 216, 216, 0.712);
+  z-index: 11;
+}
+
+.logo-box {
+  height: 40px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.logo-box a {
+  text-decoration: none;
+  color: black;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+#navbar ul li {
+  display: inline-block;
+  padding: 0px 10px;
+  line-height: 60px;
+  position: relative;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  color: black;
+  font-size: 15px;
+  padding: 5px 15px;
+}
+
+#navbar ul li a:hover {
+  padding: 0px 5px 10px;
+  transition: all 0.5s;
+  color: blueviolet;
+  border-bottom: 1px solid blueviolet;
+  box-shadow: 0px 2px 0px 0px rgba(190, 183, 183, 0.413);
+}
+
+.search-box {
+  height: 35px;
+  width: 25%;
+}
+
+#search-product {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  padding: 7px;
+  outline: none;
+}
+
+.add-to-box {
+  height: 40px;
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wishlist,
+.bag {
+  height: 30px;
+  width: 30px;
+  position: relative;
+}
+
+.wishlist i,
+.bag i {
+  font-size: 30px;
+  color: black;
+}
+
+.wishlist-count,
+.bag-count {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left: 21px;
+  top: -4px;
+  border-radius: 50%;
+  color: rgb(251, 250, 250);
+  text-align: center;
+  background-color: rgb(255, 149, 0);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 1px 2px;
+}
+
+/* Contact Section Styles */
+.contact-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact-info {
+  padding: 30px;
+}
+
+.contact-info h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.contact-info p {
+  font-size: 1.1em;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.info-item i {
+  font-size: 24px;
+  color: blueviolet;
+}
+
+.info-item h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.info-item p {
+  color: #ccc;
+  margin: 0;
+}
+
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.contact-form h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1em;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #ccc;
+}
+
+.submit-btn {
+  background-color: blueviolet;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #8a2be2;
+}
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 60px 0 0 0;
+  margin-top: 80px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-section h3 {
+  color: white;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: blueviolet;
+}
+
+.footer-section p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: blueviolet;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: blueviolet;
+}
+
+.contact-info li {
+  color: #ccc;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-info li i {
+  color: blueviolet;
+  margin-top: 5px;
+}
+
+.opening-hours li {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-bottom p {
+  color: #ccc;
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .info-item {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-info h1 {
+    font-size: 2em;
+  }
+
+  .contact-form h2 {
+    font-size: 1.5em;
+  }
+}

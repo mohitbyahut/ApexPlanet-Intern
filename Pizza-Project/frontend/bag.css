@@ -1,0 +1,535 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background: black;
+}
+/* Navbar Section */
+#navbar{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  /* border-bottom: 1px solid black; */
+  position: sticky;
+  top: 0;
+  background-color: rgba(220, 216, 216, 0.712);
+  z-index: 11;
+
+}
+.logo-box{
+  height: 40px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+#navbar ul {  
+  list-style: none;
+  display: flex;
+}
+#navbar ul li {
+  display: inline-block;
+  padding: 0px 10px;
+  line-height: 60px;
+  position: relative;
+}
+#navbar ul li a{
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  color: black;
+  font-size: 15px;
+  /* border-radius: 10px; */
+  padding: 5px 15px;
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+ 
+}
+#navbar ul li a:hover{
+  /* background-color: #036d59; */
+  padding: 0px 5px 10px;
+ transition: all .5s;
+ color: blueviolet;
+ border-bottom: 1px solid blueviolet;
+ box-shadow: 0px 2px 0px 0px rgba(190, 183, 183, 0.413)
+}
+
+#checkbtn{
+  float: left;
+  font-size: 20px;
+  color: white;
+  line-height: 100px;
+   display: none;
+  
+}
+#check{
+  display: none;
+}
+#check:checked ~ ul{
+  left: 0;
+}
+
+.search-box{
+  height:35px;
+  width: 25%;
+}
+#search-product{
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  padding: 7px;
+  outline: none;
+}
+.add-to-box{
+  height: 40px;
+  width: 120px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.wishlist{
+  height: 30px;
+  width: 30px;
+  /* border: 1px solid black; */
+  position: relative;
+}
+.wishlist i{
+ font-size: 30px;
+ color: black;
+
+}
+.wishlist-count{
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left: 21px;
+  top: -4px;
+  border-radius: 50%;
+  color: rgb(251, 250, 250);
+  text-align: center;
+  background-color: rgb(255, 149, 0);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 1px 2px;
+}
+.bag{
+  height: 30px;
+  width: 30px;
+  /* border: 1px solid black; */
+  position: relative;
+}
+.bag i{
+  font-size: 30px;
+  color: black;
+  margin-left: 2px;
+}
+.bag-count{
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left: 15px;
+  top: -4px;
+  border-radius: 50%;
+  color: rgb(251, 250, 250);
+  text-align: center;
+  background-color: rgb(255, 149, 0);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 1px 2px;
+}
+@media(max-width:1150px){
+  #checkbtn{
+       display: block;
+    }
+    #navbar ul{
+       width: 100%;
+       height: 100vh;
+       background-color: rgb(16, 52, 53);
+       position: absolute;
+       top: 60px;
+       left: -100%;
+       transition: .5s;
+       z-index: 5;
+       display: flex;
+       flex-direction: column;
+       align-items: center; 
+       transition: all .5s ease-in-out;
+    }
+    #navbar ul:hover{
+      transition: all .5s ease-in-out;
+    }
+    #navbar ul{
+      display: flex;
+      align-items: start;
+    }
+    #navbar ul li a:hover{
+      padding:5px 50px;
+      transition: all .5s;
+    }
+ }
+
+
+
+ .main-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  /* border: 1px solid yellow; */
+  gap: 10px;
+
+ }
+ .bags-container{
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+ }
+ .bag-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  position: relative;
+  gap: 40px;
+  box-shadow: 1px 1px 4px 2px rgba(203, 201, 201, 0.881);
+ }
+ 
+ .image-container{
+   width: 220px;
+   height: 250px;
+   padding: 5px;
+ }
+ .image-container img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  /* border: 1px solid black; */
+ }
+ .info-contaner{
+  margin-top: 10px;
+ }
+ .coupons{
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  padding: 5px;
+  font-size: 15px;
+  color: white;
+ }
+ .apply-coupons-box{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(218, 214, 214);
+  padding: 10px;
+ }
+ .apply-coupons-box i{
+  padding: 5px;
+  color: white;
+ }
+ .apply-coupons{
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  padding: 10px 0px;
+  color: white;
+ }
+ .apply{
+  padding: 5px;
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  border: 1px solid rgb(255, 0, 140);
+  margin-right: 5px;
+  border-radius: 2px;
+  color: rgb(255, 0, 140);
+  cursor: pointer;
+ }
+
+ .company-name{
+  color: white;
+  display: block;
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.item-name{
+  color: white;
+  margin-top: 2px;
+  display: inline-block;
+  font-size: 15px;
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+
+.prise{
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+  color: white;
+}
+
+.current-prise{
+  color: white;
+  display: inline-block;
+  font-family: nter, -apple-system, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-size-adjust: 100%;
+  margin-top: 3px;
+}
+
+.original-prise{
+  box-sizing: border-box;
+  color: white;
+  display: inline-block;
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400px;
+  text-decoration-color: white;
+  text-decoration-line: line-through;
+}
+.discount{
+  font-size: 15px;
+  font-weight: 400px;
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  display: inline-block;
+  color: white;
+}
+.cancle-button{
+  padding: 5px 5px;
+  border-radius: 50%;
+  background-color: rgba(226, 223, 223, 0.5);
+  border: 1px solid rgb(207, 205, 205);
+  cursor: pointer;
+  position: absolute;
+  left: 95%;
+  top: 7px;
+  color: white;
+}
+.cancle-button:hover{
+  background-color: rgb(255, 149, 0);
+  color: black;
+  transition: all .5s;
+}
+.item-Qty{
+  width: 200px;
+margin-top: 30px;
+font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+}
+#Qty-list{
+  width: 50px;
+  padding: 2px;
+  background-color: rgb(251, 253, 254);
+  border: 1px solid rgba(194, 192, 192, 0.58);
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px 1px rgba(250, 247, 247, 0.401),
+  inset -1px -1px 4px 3px rgba(244, 241, 241, 0.465);  
+}
+
+ .bags-info-container{
+  width: 30%;
+  height: 500px;
+  margin-top: 10px;
+ }
+
+ .prise-detail{
+  width: 100%;
+  /* border: 1px solid black; */
+  margin-top: 10px;
+  display: flex;
+ }
+.prise-details{
+  padding: 5px;
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  color: white;
+}
+.items{
+  padding: 5px;
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  color: white;
+}
+.prise-container{
+  width: 100%;
+  /* border: 1px solid black; */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.total-mrp-box{
+  display: flex;
+  justify-content: space-between;
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  padding: 5px;
+  font-weight: 200;
+  color: white;
+}
+.box-discount{
+  display: flex;
+  justify-content: space-between;
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  padding: 5px;
+  font-weight: 200;
+  color: white;
+}
+.discount-prise{
+  color: rgb(0, 157, 255);
+}
+.convenience-fee-box{
+  display: flex;
+  justify-content: space-between;
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  padding: 5px;
+  font-weight: 200;
+  color: white;
+}
+.total-amount-box{
+  display: flex;
+  justify-content: space-between;
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  padding: 5px;
+  font-weight: 600;
+  color: white;
+}
+.coupon-box{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  border-bottom: 1px dotted white;
+  color: white;
+}
+.apply-coupon{
+  color: rgb(255, 0, 140);
+  cursor: pointer;
+}
+.order-now{
+  width: 100%;
+  padding: 10px;
+  margin-top:30px;
+  cursor: pointer;
+  background-color: rgb(255, 149, 0);
+  color: black;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  display: inline-block;
+}
+.order-now:hover{
+  background-color: transparent;
+  color: white;
+  border: 1px solid gray;
+  transition: all .5s;
+}
+
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 60px 0 0 0;
+  margin-top: 80px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-section h3 {
+  color: white;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: blueviolet;
+}
+
+.footer-section p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: blueviolet;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: blueviolet;
+}
+
+.contact-info li {
+  color: #ccc;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-info li i {
+  color: blueviolet;
+  margin-top: 5px;
+}
+
+.opening-hours li {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-bottom p {
+  color: #ccc;
+}
